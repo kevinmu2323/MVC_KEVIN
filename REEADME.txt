@@ -1,0 +1,15 @@
+este es  la estructura de una plantilla MVC basica  para Poder usarlo en cualquier proyecto web 
+
+la estructura es la siguiente:
+
+- app
+    - config
+    - controllers
+    - models
+    - views
+- public
+    - css
+    - js
+    - img
+- index.php
+- README.txt

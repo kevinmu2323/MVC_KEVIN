@@ -1,0 +1,21 @@
+name: "MVC"
+services:
+    db:
+        image: mysql:8.0
+        container_name: "DB_MVC"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_USER: ${DB_USER}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+        ports:
+            - "${DB_PORT}"
+    php_mvc:
+        build: ./Dockerfiles
+        container_name: "PHP_MVC"
+        restart: always
+        volumes: 
+            - ${VOLUMES_PATH}
+        ports:
+            - "${PHP_PORT}:80"
