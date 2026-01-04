@@ -16,6 +16,6 @@ services:
         container_name: "PHP_MVC"
         restart: always
         volumes: 
-            - ${VOLUMES_PATH}
+            - ${VOLUMES_PATH}:/var/www/html
         ports:
             - "${PHP_PORT}:80"
